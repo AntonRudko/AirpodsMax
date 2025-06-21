@@ -17,15 +17,17 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 
-	<body>
-		<header class="header">
-			<div class="container">
-				<div class="header__top">
+	<body class="font-inter text-base text-black font-medium leading-[1.2]">
+		<header class="pb-[100px] min-h-screen relative">
+			<!-- container -->
+			<div class="max-w-[1200px] px-[10px] mx-auto">
+				<!-- header__top -->
+				<div class="flex items-center justify-between py-[40px]">
 					<a href="#" class="logo">
 						<img src="images/logo.svg" alt="logo" />
 					</a>
 					<nav class="menu">
-						<ul class="menu__list">
+						<ul class="flex items-center gap-x-10 font-bold">
 							<li class="menu__item">
 								<a href="#" class="menu__link">Info</a>
 							</li>
@@ -36,47 +38,51 @@
 								<a href="#" class="menu__link">Contacts</a>
 							</li>
 							<li class="menu__item menu__item-bth">
-								<button href="#" class="menu__btn">BUY</button>
+								<button
+									href="#"
+									class="px-[58px] py-[15px] rounded-[30px] bg-black text-white font-bold uppercase"
+								>
+									BUY
+								</button>
 							</li>
 						</ul>
 					</nav>
 				</div>
 				<div class="header__content">
-					<h1 class="title">
-						<span class="title--air">Air</span
-						><span class="title--pod">Pod</span><span class="title--s">S</span
-						><span class="title--m">M</span><span class="title--ax">AX</span>
+					<!-- title -->
+					<h1 class="absolute pt-[110px] text-[210px] font-bold">
+						<span>Air</span>
+						<span class="relative -z-10 inline-block">Pod</span>
+						<span class="inline-block transform translate-y-[60px]">S</span>
+						<span
+							class="inline-block transform -translate-x-[26px] translate-y-[275px]"
+							>M</span
+						>
+						<span
+							class="relative -z-10 inline-block -translate-x-[100px] translate-y-[453px]"
+							>AX</span
+						>
 					</h1>
-					<div class="header__content-images">
-						<img
-							class="content-item content-item__active color--blue"
-							src="images/airpods-blue.png"
-							alt=""
-						/>
-						<img
-							class="content-item color--black"
-							src="images/airpods-black.png"
-							alt=""
-						/>
-						<img
-							class="content-item color--green"
-							src="images/airpods-green.png"
-							alt=""
-						/>
-						<img
-							class="content-item color--red"
-							src="images/airpods-red.png"
-							alt=""
-						/>
-						<img
-							class="content-item color--white"
-							src="images/airpods-white.png"
-							alt=""
-						/>
-					</div>
-				</div>
-			</div>
-		</header>
+					<div
+        class="relative text-center pb-[50px]
+               before:content-['']
+               before:absolute before:inset-0 before:w-full
+               before:bg-gradient-to-b before:from-[#cadbeb] before:to-transparent
+               before:-z-10
+               [&:has(.content-item__active.color--red)]:before:from-[#f3d6d1]
+               [&:has(.content-item__active.color--green)]:before:from-[#ddead9]
+               [&:has(.content-item__active.color--black)]:before:from-[#b6b6b6]
+               [&:has(.content-item__active.color--white)]:before:from-[#fafafa]"
+      >
+        <img class="hidden inline-block content-item content-item__active color--blue" src="images/airpods-blue.png" alt="" />
+        <img class="hidden inline-block content-item color--black" src="images/airpods-black.png" alt="" />
+        <img class="hidden inline-block content-item color--green" src="images/airpods-green.png" alt="" />
+        <img class="hidden inline-block content-item color--red"   src="images/airpods-red.png"   alt="" />
+        <img class="hidden inline-block content-item color--white" src="images/airpods-white.png" alt="" />
+      </div>
+    </div>
+  </header>
+
 
 		<main class="main">
 			<section class="choose-color">
